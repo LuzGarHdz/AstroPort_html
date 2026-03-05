@@ -63,21 +63,19 @@ https://templatemo.com/tm-600-prism-flux
             }
         ];
 
-        // Skills data
-        const skillsData = [
-            { name: 'React.js', icon: '⚛️', level: 95, category: 'frontend' },
-            { name: 'Node.js', icon: '🟢', level: 90, category: 'backend' },
-            { name: 'TypeScript', icon: '📘', level: 88, category: 'frontend' },
-            { name: 'AWS', icon: '☁️', level: 92, category: 'cloud' },
-            { name: 'Docker', icon: '🐳', level: 85, category: 'cloud' },
-            { name: 'Python', icon: '🐍', level: 93, category: 'backend' },
-            { name: 'Kubernetes', icon: '☸️', level: 82, category: 'cloud' },
-            { name: 'GraphQL', icon: '◈', level: 87, category: 'backend' },
-            { name: 'TensorFlow', icon: '🤖', level: 78, category: 'emerging' },
-            { name: 'Blockchain', icon: '🔗', level: 75, category: 'emerging' },
-            { name: 'Vue.js', icon: '💚', level: 85, category: 'frontend' },
-            { name: 'MongoDB', icon: '🍃', level: 90, category: 'backend' }
-        ];
+        // Gallery data
+                const galleryData = [
+                    { title: 'Orbital Bay', caption: 'Atraque nocturno bajo lluvia de partículas.', image: 'images/neural-network.jpg' },
+                    { title: 'Hangar Drone', caption: 'Ensambles mecha y carga automatizada.', image: 'images/ar-interface.jpg' },
+                    { title: 'Command Deck', caption: 'HUD táctico con rutas y facciones.', image: 'images/quantum-cloud.jpg' },
+                    { title: 'Cargo Ring', caption: 'Convoys entrando a la esclusa magnética.', image: 'images/blockchain-vault.jpg' },
+                    { title: 'Market Row', caption: 'Señalética holográfica en mercado orbital.', image: 'images/data-nexus.jpg' },
+                    { title: 'Storm Window', caption: 'Tormenta solar sobre el hemisferio oscuro.', image: 'images/iot-matrix.jpg' },
+                    { title: 'Stellar Forge', caption: 'Armería flotante bañada en plasma.', image: 'images/cyber-defense.jpg' },
+                    { title: 'Atrium Bloom', caption: 'Jardín hidropónico bajo domo ámbar.', image: 'images/neural-network.jpg' },
+                    { title: 'Comms Array', caption: 'Antenas apuntando al cinturón exterior.', image: 'images/ar-interface.jpg' },
+                    { title: 'Long Haul', caption: 'Carguero alineando salto gravitacional.', image: 'images/quantum-cloud.jpg' }
+                ];
 
         // Scroll to section function
         function scrollToSection(sectionId) {
@@ -266,49 +264,54 @@ https://templatemo.com/tm-600-prism-flux
             updateCarousel();
         }
 
-        // Initialize hexagonal skills grid
-        function initSkillsGrid() {
-            const skillsGrid = document.getElementById('skillsGrid');
-            const categoryTabs = document.querySelectorAll('.category-tab');
-            
-            function displaySkills(category = 'all') {
-                skillsGrid.innerHTML = '';
-                
-                const filteredSkills = category === 'all' 
-                    ? skillsData 
-                    : skillsData.filter(skill => skill.category === category);
-                
-                filteredSkills.forEach((skill, index) => {
-                    const hexagon = document.createElement('div');
-                    hexagon.className = 'skill-hexagon';
-                    hexagon.style.animationDelay = `${index * 0.1}s`;
-                    
-                    hexagon.innerHTML = `
-                        <div class="hexagon-inner">
-                            <div class="hexagon-content">
-                                <div class="skill-icon-hex">${skill.icon}</div>
-                                <div class="skill-name-hex">${skill.name}</div>
-                                <div class="skill-level">
-                                    <div class="skill-level-fill" style="width: ${skill.level}%"></div>
-                                </div>
-                                <div class="skill-percentage-hex">${skill.level}%</div>
-                            </div>
-                        </div>
-                    `;
-                    
-                    skillsGrid.appendChild(hexagon);
-                });
+        // Initialize gallery grid
+        function initGalleryGrid() {
+            const galleryGrid = document.getElementById('galleryGrid');
+            const modal = document.getElementById('galleryModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+            const modalClose = document.getElementById('modalClose');
+
+            function openModal(item) {
+                modal.classList.add('open');
+                modalImage.src = item.image;
+                modalImage.alt = item.title;
+                modalCaption.textContent = item.caption || item.title;
             }
-            
-            categoryTabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    categoryTabs.forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
-                    displaySkills(tab.dataset.category);
-                });
+
+            function closeModal() {
+                modal.classList.remove('open');
+            }
+
+            modalClose.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
             });
-            
-            displaySkills();
+
+            // Allow Esc to close modal
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('open')) {
+                    closeModal();
+                }
+            });
+
+            galleryGrid.innerHTML = '';
+
+            galleryData.forEach((item, index) => {
+                const hexagon = document.createElement('div');
+                hexagon.className = 'skill-hexagon';
+                hexagon.style.animationDelay = `${index * 0.08}s`;
+
+                hexagon.innerHTML = `
+                    <div class="hexagon-inner">
+                        <img class="hexagon-media" src="${item.image}" alt="${item.title}">
+                        <div class="hexagon-overlay">${item.title}</div>
+                    </div>
+                `;
+
+                hexagon.addEventListener('click', () => openModal(item));
+                galleryGrid.appendChild(hexagon);
+            });
         }
 
         // Event listeners
@@ -335,7 +338,7 @@ https://templatemo.com/tm-600-prism-flux
 
         // Initialize on load
         initCarousel();
-        initSkillsGrid();
+        initGalleryGrid();
         initParticles();
 
         // Mobile menu toggle
@@ -449,22 +452,6 @@ https://templatemo.com/tm-600-prism-flux
             observer.observe(statsSection);
         }
 
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // Show success message
-            alert(`Thank you ${data.name}! Your message has been transmitted successfully. We'll respond within 24 hours.`);
-            
-            // Reset form
-            contactForm.reset();
-        });
-
         // Loading screen
         window.addEventListener('load', () => {
             setTimeout(() => {
@@ -473,11 +460,4 @@ https://templatemo.com/tm-600-prism-flux
             }, 1500);
         });
 
-        // Add parallax effect to hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.hero');
-            if (parallax) {
-                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
+        // Parallax disabled to keep carousel fixed in its section
