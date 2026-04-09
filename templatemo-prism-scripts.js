@@ -65,16 +65,16 @@ https://templatemo.com/tm-600-prism-flux
 
         // Gallery data
                 const galleryData = [
-                    { title: 'Orbital Bay', caption: 'Atraque nocturno bajo lluvia de partículas.', image: 'images/neural-network.jpg' },
-                    { title: 'Hangar Drone', caption: 'Ensambles mecha y carga automatizada.', image: 'images/ar-interface.jpg' },
-                    { title: 'Command Deck', caption: 'HUD táctico con rutas y facciones.', image: 'images/quantum-cloud.jpg' },
-                    { title: 'Cargo Ring', caption: 'Convoys entrando a la esclusa magnética.', image: 'images/blockchain-vault.jpg' },
-                    { title: 'Market Row', caption: 'Señalética holográfica en mercado orbital.', image: 'images/data-nexus.jpg' },
-                    { title: 'Storm Window', caption: 'Tormenta solar sobre el hemisferio oscuro.', image: 'images/iot-matrix.jpg' },
-                    { title: 'Stellar Forge', caption: 'Armería flotante bañada en plasma.', image: 'images/cyber-defense.jpg' },
-                    { title: 'Atrium Bloom', caption: 'Jardín hidropónico bajo domo ámbar.', image: 'images/neural-network.jpg' },
-                    { title: 'Comms Array', caption: 'Antenas apuntando al cinturón exterior.', image: 'images/ar-interface.jpg' },
-                    { title: 'Long Haul', caption: 'Carguero alineando salto gravitacional.', image: 'images/quantum-cloud.jpg' }
+                    { title: 'La Luna', caption: 'Atraque nocturno bajo lluvia de partículas.', image: 'images/neural-network.jpg' },
+                    { title: 'AstroSS', caption: 'Ensambles mecha y carga automatizada.', image: 'images/ar-interface.jpg' },
+                    { title: 'Muelle Espacial', caption: 'HUD táctico con rutas y facciones.', image: 'images/quantum-cloud.jpg' },
+                    { title: 'Vivero', caption: 'Convoys entrando a la esclusa magnética.', image: 'images/blockchain-vault.jpg' },
+                    { title: 'Tu Habitación', caption: 'Señalética holográfica en mercado orbital.', image: 'images/data-nexus.jpg' },
+                    { title: 'Comedor', caption: 'Tormenta solar sobre el hemisferio oscuro.', image: 'images/iot-matrix.jpg' },
+                    { title: 'Maquinaria', caption: 'Armería flotante bañada en plasma.', image: 'images/cyber-defense.jpg' },
+                    { title: 'Zona de Suministros', caption: 'Jardín hidropónico bajo domo ámbar.', image: 'images/neural-network.jpg' },
+                    { title: 'Naves', caption: 'Antenas apuntando al cinturón exterior.', image: 'images/ar-interface.jpg' },
+                    { title: 'Aliens', caption: 'Carguero alineando salto gravitacional.', image: 'images/quantum-cloud.jpg' }
                 ];
 
         // Scroll to section function
@@ -460,4 +460,3 @@ https://templatemo.com/tm-600-prism-flux
             }, 1500);
         });
 
-        // Parallax disabled to keep carousel fixed in its section
