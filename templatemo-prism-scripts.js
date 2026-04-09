@@ -14,67 +14,67 @@ https://templatemo.com/tm-600-prism-flux
         const portfolioData = [
             {
                 id: 1,
-                title: 'Neural Network',
-                description: 'Advanced AI system with deep learning capabilities for predictive analytics and pattern recognition.',
-                image: 'images/neural-network.jpg',
+                title: 'LLegando a la Luna',
+                description: 'Proyecto de colonización lunar con tecnología de punta para establecer la primera base humana permanente en la Luna.',
+                image: 'images/LUNA.jpg',
                 tech: ['TensorFlow', 'Python', 'CUDA']
             },
             {
                 id: 2,
-                title: 'Quantum Cloud',
-                description: 'Next-generation cloud infrastructure leveraging quantum computing for unprecedented processing power.',
-                image: 'images/quantum-cloud.jpg',
-                tech: ['AWS', 'Kubernetes', 'Docker']
+                title: 'Inicio de la construcción de AstroSS',
+                description: 'Primeros pasos en la construcción de la estación espacial más avanzada jamás creada.',
+                image: 'images/ESTACION.jpg',
+                tech: ['TensorFlow', 'Python', 'CUDA']
             },
             {
                 id: 3,
-                title: 'Blockchain Vault',
-                description: 'Secure decentralized storage solution using advanced encryption and distributed ledger technology.',
+                title: 'Mapa de la Estación',
+                description: 'Croquis completo con todas las amenidades',
                 image: 'images/blockchain-vault.jpg',
-                tech: ['Ethereum', 'Solidity', 'Web3']
+                tech: ['TensorFlow', 'Python', 'CUDA']
             },
             {
                 id: 4,
-                title: 'Cyber Defense',
-                description: 'Military-grade cybersecurity framework with real-time threat detection and automated response.',
-                image: 'images/cyber-defense.jpg',
-                tech: ['Zero Trust', 'AI Defense', 'Encryption']
+                title: 'Abiertos al público',
+                description: 'AstroSS abre sus puertas al público, ofreciendo experiencias únicas en el espacio y convirtiéndose en un destino turístico espacial de primer nivel.',
+                image: 'images/COMEDOR.webp',
+                tech: ['TensorFlow', 'Python', 'CUDA']
             },
             {
                 id: 5,
-                title: 'Data Nexus',
-                description: 'Big data processing platform capable of analyzing petabytes of information in real-time.',
-                image: 'images/data-nexus.jpg',
-                tech: ['Apache Spark', 'Hadoop', 'Kafka']
+                title: 'Servicios',
+                description: 'Consigue suministros para las necesidades de tu tripulación, carga el combustible de tu nave y pasa el tiempo en la estación',
+                image: 'images/MAQUINARIA.webp',
+                tech: ['TensorFlow', 'Python', 'CUDA']
             },
             {
                 id: 6,
-                title: 'AR Interface',
-                description: 'Augmented reality system for immersive data visualization and interactive experiences.',
-                image: 'images/ar-interface.jpg',
-                tech: ['Unity', 'ARCore', 'Computer Vision']
+                title: 'Ataque de Aliens',
+                description: 'El pasado 29 de marzo de 3122, la estación espacial AstroSS fue atacada por una raza alienígena desconocida, poniendo en peligro a los habitantes y desafiando la seguridad de la estación.',
+                image: 'images/ALIENS.webp',
+                tech: ['TensorFlow', 'Python', 'CUDA']
             },
             {
                 id: 7,
-                title: 'IoT Matrix',
-                description: 'Intelligent IoT ecosystem connecting millions of devices with edge computing capabilities.',
-                image: 'images/iot-matrix.jpg',
-                tech: ['MQTT', 'Edge AI', '5G']
+                title: 'Vivero de la Estación',
+                description: 'Conoce el proceso de cultivación del Vivero de AstroSS',
+                image: 'images/VIVERO.jpg',
+                tech: ['TensorFlow', 'Python', 'CUDA']
             }
         ];
 
         // Gallery data
                 const galleryData = [
-                    { title: 'La Luna', caption: 'Atraque nocturno bajo lluvia de partículas.', image: 'images/neural-network.jpg' },
-                    { title: 'AstroSS', caption: 'Ensambles mecha y carga automatizada.', image: 'images/ar-interface.jpg' },
-                    { title: 'Muelle Espacial', caption: 'HUD táctico con rutas y facciones.', image: 'images/quantum-cloud.jpg' },
-                    { title: 'Vivero', caption: 'Convoys entrando a la esclusa magnética.', image: 'images/blockchain-vault.jpg' },
-                    { title: 'Tu Habitación', caption: 'Señalética holográfica en mercado orbital.', image: 'images/data-nexus.jpg' },
-                    { title: 'Comedor', caption: 'Tormenta solar sobre el hemisferio oscuro.', image: 'images/iot-matrix.jpg' },
-                    { title: 'Maquinaria', caption: 'Armería flotante bañada en plasma.', image: 'images/cyber-defense.jpg' },
-                    { title: 'Zona de Suministros', caption: 'Jardín hidropónico bajo domo ámbar.', image: 'images/neural-network.jpg' },
-                    { title: 'Naves', caption: 'Antenas apuntando al cinturón exterior.', image: 'images/ar-interface.jpg' },
-                    { title: 'Aliens', caption: 'Carguero alineando salto gravitacional.', image: 'images/quantum-cloud.jpg' }
+                    { title: 'La Luna', caption: 'Tu nuevo hogar.', image: 'images/LUNA.jpg' },
+                    { title: 'AstroSS', caption: 'Estación espacial de última generación.', image: 'images/ESTACION.jpg' },
+                    { title: 'Muelle Espacial', caption: 'Donde se estacionarán las naves.', image: 'images/quantum-cloud.jpg' },
+                    { title: 'Vivero', caption: 'Centro de cultivo en entorno controlado.', image: 'images/VIVERO.jpg' },
+                    { title: 'Tu Habitación', caption: 'Tu espacio personal en el cosmos.', image: 'images/HABITACION.jpg' },
+                    { title: 'Comedor', caption: 'Área de comedor en la estación.', image: 'images/COMEDOR.webp' },
+                    { title: 'Maquinaria', caption: 'Instalaciones de mantenimiento y reparación.', image: 'images/MAQUINARIA.webp' },
+                    { title: 'Zona de Suministros', caption: 'Área de almacenamiento y distribución.', image: 'images/SUMINISTROS.jpg' },
+                    { title: 'Naves', caption: 'Vehículos de transporte en la estación.', image: 'images/NAVE.jpg' },
+                    { title: 'Aliens', caption: 'Visitas extraterrestres a la estación.', image: 'images/ALIENS.webp' }
                 ];
 
         // Scroll to section function
@@ -138,7 +138,6 @@ https://templatemo.com/tm-600-prism-flux
                     </div>
                     <h3 class="card-title">${data.title}</h3>
                     <p class="card-description">${data.description}</p>
-                    <div class="card-tech">${techBadges}</div>
                     <button class="card-cta" onclick="scrollToSection('about')">Explore</button>
                 </div>
             `;
