@@ -7,7 +7,7 @@
 			summary: 'Primera misión logística a la órbita lunar para habilitar rutas estables hacia AstroSS.',
 			image: 'images/LUNA.jpg',
 			author: 'Comando AstroSS',
-			date: '12 Enero 3122',
+			date: '12 Agosto 3117',
 			tags: ['Mision', 'Logistica', 'Luna'],
 			content: [
 				'La flota inaugural completó su llegada a la órbita lunar con suministros críticos para la expansión de AstroSS. Este avance marca el inicio de una red de transporte más confiable para tripulaciones de distintas naciones.',
@@ -21,7 +21,7 @@
 			summary: 'Comienza el ensamblaje estructural de la estacion espacial con equipos multinacionales.',
 			image: 'images/ESTACION.jpg',
 			author: 'Departamento de Ingenieria',
-			date: '03 Febrero 3122',
+			date: '03 Febrero 3118',
 			tags: ['Infraestructura', 'Ingenieria', 'Orbita'],
 			content: [
 				'Las labores de construccion iniciaron con la union del modulo central y los primeros anillos de soporte. El objetivo principal fue establecer una base segura para futuros acoplamientos.',
@@ -35,7 +35,7 @@
 			summary: 'Se publica el primer plano funcional con rutas, modulos y puntos de servicio.',
 			image: 'images/blockchain-vault.jpg',
 			author: 'Navegacion Interna',
-			date: '20 Febrero 3122',
+			date: '20 Febrero 3118',
 			tags: ['Mapa', 'Operacion', 'Servicios'],
 			content: [
 				'AstroSS presento su primer mapa oficial para orientar a visitantes y personal operativo. El plano incluye rutas de emergencia, areas de carga y zonas de atencion a tripulaciones.',
@@ -77,7 +77,7 @@
 			summary: 'Un incidente de seguridad activa los protocolos de defensa de la estacion.',
 			image: 'images/ALIENS.webp',
 			author: 'Seguridad AstroSS',
-			date: '29 Marzo 3122',
+			date: '29 Septiembre 3123',
 			tags: ['Seguridad', 'Defensa', 'Alerta'],
 			content: [
 				'Durante la jornada del 29 de marzo, una presencia hostil no identificada intento vulnerar las zonas externas de la estacion. El personal activo los protocolos de contencion de inmediato.',
@@ -91,7 +91,7 @@
 			summary: 'El vivero entra en fase productiva para sostener alimentos frescos en orbitas largas.',
 			image: 'images/VIVERO.jpg',
 			author: 'BioSoporte AstroSS',
-			date: '05 Abril 3122',
+			date: '05 Abril 3124',
 			tags: ['Vivero', 'Alimentos', 'Sostenibilidad'],
 			content: [
 				'El modulo de cultivo de AstroSS completo su fase inicial y comenzo a producir vegetales de ciclo corto en ambiente controlado.',
@@ -130,7 +130,7 @@
 		const selectedId = params.get('article') || params.get('id') || '1';
 		const selectedArticle = getArticleById(selectedId) || newsArticles[0];
 
-		document.title = `${selectedArticle.title} | AstroPort Noticias`;
+		document.title = `${selectedArticle.title} | AstroSS Noticias`;
 
 		const tagMarkup = selectedArticle.tags
 			.map((tag) => `<span class="article-tag">${tag}</span>`)

@@ -275,6 +275,41 @@ https://templatemo.com/tm-600-prism-flux
             });
         }
 
+        // Initialize download modal from "Unete al Equipo" button
+        function initDownloadModal() {
+            const joinTeamBtn = document.getElementById('joinTeamBtn');
+            const downloadModal = document.getElementById('downloadModal');
+            const downloadModalClose = document.getElementById('downloadModalClose');
+
+            if (!joinTeamBtn || !downloadModal || !downloadModalClose) {
+                return;
+            }
+
+            function openDownloadModal() {
+                downloadModal.classList.add('open');
+                downloadModal.setAttribute('aria-hidden', 'false');
+            }
+
+            function closeDownloadModal() {
+                downloadModal.classList.remove('open');
+                downloadModal.setAttribute('aria-hidden', 'true');
+            }
+
+            joinTeamBtn.addEventListener('click', openDownloadModal);
+            downloadModalClose.addEventListener('click', closeDownloadModal);
+            downloadModal.addEventListener('click', (e) => {
+                if (e.target === downloadModal) {
+                    closeDownloadModal();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && downloadModal.classList.contains('open')) {
+                    closeDownloadModal();
+                }
+            });
+        }
+
         // Event listeners
         document.getElementById('nextBtn').addEventListener('click', nextSlide);
         document.getElementById('prevBtn').addEventListener('click', prevSlide);
@@ -300,6 +335,7 @@ https://templatemo.com/tm-600-prism-flux
         // Initialize on load
         initCarousel();
         initGalleryGrid();
+        initDownloadModal();
         initParticles();
 
         // Mobile menu toggle

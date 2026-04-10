@@ -1152,6 +1152,87 @@ body::after {
 	border-color: var(--accent-purple);
 }
 
+.download-modal {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.82);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2100;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+	padding: 20px;
+}
+
+.download-modal.open {
+	opacity: 1;
+	visibility: visible;
+}
+
+.download-modal-content {
+	position: relative;
+	width: min(980px, 100%);
+	background: linear-gradient(145deg, rgba(26, 26, 26, 0.98), rgba(18, 18, 18, 0.95));
+	border: 1px solid var(--metal-dark);
+	border-radius: 16px;
+	padding: 28px;
+	box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+}
+
+.download-title {
+	font-size: clamp(24px, 4.2vw, 38px);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-bottom: 22px;
+	padding-right: 44px;
+	background: linear-gradient(135deg, var(--text-primary), var(--accent-cyan));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.download-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+}
+
+.download-platform {
+	background: linear-gradient(135deg, rgba(42, 42, 42, 0.6), rgba(18, 18, 18, 0.9));
+	border: 1px solid var(--metal-dark);
+	border-radius: 12px;
+	padding: 20px;
+	display: grid;
+	gap: 12px;
+	align-content: start;
+	transition: all 0.25s ease;
+}
+
+.download-platform:hover {
+	transform: translateY(-5px);
+	border-color: var(--accent-purple);
+	box-shadow: 0 14px 30px rgba(153, 69, 255, 0.2);
+}
+
+.download-platform h4 {
+	font-size: 22px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.download-platform p {
+	color: var(--text-secondary);
+	line-height: 1.6;
+	min-height: 52px;
+}
+
+.download-platform .card-cta {
+	width: 100%;
+	margin-top: 6px;
+}
+
 /* Team Section */
 .team-section {
 	padding: 120px 30px;
@@ -1893,6 +1974,14 @@ a.info-item {
 
 	.team-card {
 		padding: 28px 22px;
+	}
+
+	.download-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.download-modal-content {
+		padding: 22px;
 	}
 }
 
