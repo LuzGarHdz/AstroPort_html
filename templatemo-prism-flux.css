@@ -517,11 +517,14 @@ body::after {
 }
 
 .card-cta {
+	display: inline-block;
 	padding: 12px 30px;
 	background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
 	border: none;
 	border-radius: 30px;
 	color: var(--text-primary);
+	text-decoration: none;
+	text-align: center;
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 2px;
