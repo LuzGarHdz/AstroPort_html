@@ -9,59 +9,19 @@ https://templatemo.com/tm-600-prism-flux
 */
 
 
-// Portfolio data for carousel
+// Portfolio data for carousel (shared with article page via content.js)
+        const portfolioData = (window.AstroContent && typeof window.AstroContent.toPortfolioData === 'function')
+            ? window.AstroContent.toPortfolioData()
+            : [];
 
-        const portfolioData = [
-            {
-                id: 1,
-                title: 'LLegando a la Luna',
-                description: 'Proyecto de colonización lunar con tecnología de punta para establecer la primera base humana permanente en la Luna.',
-                image: 'images/LUNA.jpg',
-                tech: ['TensorFlow', 'Python', 'CUDA']
-            },
-            {
-                id: 2,
-                title: 'Inicio de la construcción de AstroSS',
-                description: 'Primeros pasos en la construcción de la estación espacial más avanzada jamás creada.',
-                image: 'images/ESTACION.jpg',
-                tech: ['TensorFlow', 'Python', 'CUDA']
-            },
-            {
-                id: 3,
-                title: 'Mapa de la Estación',
-                description: 'Croquis completo con todas las amenidades',
-                image: 'images/blockchain-vault.jpg',
-                tech: ['TensorFlow', 'Python', 'CUDA']
-            },
-            {
-                id: 4,
-                title: 'Abiertos al público',
-                description: 'AstroSS abre sus puertas al público, ofreciendo experiencias únicas en el espacio y convirtiéndose en un destino turístico espacial de primer nivel.',
-                image: 'images/COMEDOR.webp',
-                tech: ['TensorFlow', 'Python', 'CUDA']
-            },
-            {
-                id: 5,
-                title: 'Servicios',
-                description: 'Consigue suministros para las necesidades de tu tripulación, carga el combustible de tu nave y pasa el tiempo en la estación',
-                image: 'images/MAQUINARIA.webp',
-                tech: ['TensorFlow', 'Python', 'CUDA']
-            },
-            {
-                id: 6,
-                title: 'Ataque de Aliens',
-                description: 'El pasado 29 de marzo de 3122, la estación espacial AstroSS fue atacada por una raza alienígena desconocida, poniendo en peligro a los habitantes y desafiando la seguridad de la estación.',
-                image: 'images/ALIENS.webp',
-                tech: ['TensorFlow', 'Python', 'CUDA']
-            },
-            {
-                id: 7,
-                title: 'Vivero de la Estación',
-                description: 'Conoce el proceso de cultivación del Vivero de AstroSS',
-                image: 'images/VIVERO.jpg',
-                tech: ['TensorFlow', 'Python', 'CUDA']
+        function goToArticle(articleId) {
+            if (window.AstroContent && typeof window.AstroContent.goToArticle === 'function') {
+                window.AstroContent.goToArticle(articleId);
+                return;
             }
-        ];
+
+            window.location.href = `article.html?article=${encodeURIComponent(articleId)}`;
+        }
 
         // Gallery data
                 const galleryData = [
@@ -138,9 +98,11 @@ https://templatemo.com/tm-600-prism-flux
                     </div>
                     <h3 class="card-title">${data.title}</h3>
                     <p class="card-description">${data.description}</p>
-                    <button class="card-cta" onclick="scrollToSection('about')">Explore</button>
+                    <button class="card-cta" onclick="goToArticle(${data.id})">Leer articulo</button>
                 </div>
             `;
+
+            item.addEventListener('click', () => goToArticle(data.id));
             
             return item;
         }
@@ -453,8 +415,22 @@ https://templatemo.com/tm-600-prism-flux
 
         // Loading screen
         window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            if (!loader) {
+                return;
+            }
+
+            const params = new URLSearchParams(window.location.search);
+            const skipByQuery = params.get('skipLoader') === '1';
+            const skipBySession = sessionStorage.getItem('skipLoader') === '1';
+
+            if (skipByQuery || skipBySession) {
+                loader.classList.add('hidden');
+                sessionStorage.removeItem('skipLoader');
+                return;
+            }
+
             setTimeout(() => {
-                const loader = document.getElementById('loader');
                 loader.classList.add('hidden');
             }, 1500);
         });
