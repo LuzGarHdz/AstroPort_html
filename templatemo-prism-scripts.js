@@ -25,16 +25,36 @@ https://templatemo.com/tm-600-prism-flux
 
         // Gallery data
                 const galleryData = [
-                    { title: 'La Luna', caption: 'Tu nuevo hogar.', image: 'images/LUNA.jpg' },
-                    { title: 'AstroSS', caption: 'Estación espacial de última generación.', image: 'images/ESTACION.jpg' },
-                    { title: 'Muelle Espacial', caption: 'Donde se estacionarán las naves.', image: 'images/quantum-cloud.jpg' },
-                    { title: 'Vivero', caption: 'Centro de cultivo en entorno controlado.', image: 'images/VIVERO.jpg' },
-                    { title: 'Tu Habitación', caption: 'Tu espacio personal en el cosmos.', image: 'images/HABITACION.jpg' },
-                    { title: 'Comedor', caption: 'Área de comedor en la estación.', image: 'images/COMEDOR.webp' },
-                    { title: 'Maquinaria', caption: 'Instalaciones de mantenimiento y reparación.', image: 'images/MAQUINARIA.webp' },
-                    { title: 'Zona de Suministros', caption: 'Área de almacenamiento y distribución.', image: 'images/SUMINISTROS.jpg' },
+                    { title: 'La Luna', caption: 'Tu nuevo hogar.', image: 'images/luna.png' },
+                    { title: 'AstroSS', caption: 'Vista general de la estación espacial.', image: 'images/estacion2.png' },
+                    { title: 'Hangares', caption: 'Donde aterrizan las naves de cada nación.', image: 'images/hangar.png' },
+                    { title: 'Pista de Llegada', caption: 'Las naves descienden a la estación.', image: 'images/llegada.png' },
+                    { title: 'Entrada', caption: 'Acceso principal a la estación.', image: 'images/entrada2.png' },
+                    { title: 'Recepción', caption: 'Primer punto de contacto con los visitantes.', image: 'images/entrada.png' },
+                    { title: 'Pasillos', caption: 'Conectan todos los módulos de AstroSS.', image: 'images/pasillo.png' },
+                    { title: 'Tu Habitación', caption: 'Tu espacio personal en el cosmos.', image: 'images/cuarto.png' },
+                    { title: 'Almacén', caption: 'Aquí se fabrican y guardan los suministros.', image: 'images/almacen.png' },
+                    { title: 'Maquinaria', caption: 'Instalaciones de mantenimiento y reparación.', image: 'images/maquinaria.png' },
+                    { title: 'Centro de Control', caption: 'Monitoreo de integridad y energía.', image: 'images/maquinaria1.png' },
+                    { title: 'Vivero', caption: 'Centro de cultivo en entorno controlado.', image: 'images/vivero2.png' },
                     { title: 'Naves', caption: 'Vehículos de transporte en la estación.', image: 'images/NAVE.jpg' },
-                    { title: 'Aliens', caption: 'Visitas extraterrestres a la estación.', image: 'images/ALIENS.webp' }
+                    { title: 'Aliens', caption: 'Visitas extraterrestres a la estación.', image: 'images/ALIENS.webp' },
+                    { title: 'Sergio', caption: 'El operador de AstroSS y protagonista del juego.', image: 'images/sergio.png' },
+                    { title: 'Alien Jefe', caption: 'El enemigo más peligroso de la estación.', image: 'images/alien.png' },
+                    { title: 'Horda Alienígena', caption: 'Aliens que atacan las paredes de la estación.', image: 'images/hordas.png' },
+                    { title: 'Nave Alien', caption: 'Trae al alien jefe y a la horda.', image: 'images/navealien.png' },
+                    { title: 'Pirata Espacial', caption: 'Sabotea los paneles de energía.', image: 'images/pirata1.png' },
+                    { title: 'Nave Pirata', caption: 'Destrúyela para ganar lunas extra.', image: 'images/pirata.png' },
+                    { title: 'Carrito de Carga', caption: 'Lleva hasta 8 cajas por viaje.', image: 'images/carrito.png' },
+                    { title: 'Tienda', caption: 'Compra consumibles y mejoras con lunas.', image: 'images/tienda.png' },
+                    { title: 'Reparación', caption: 'Sergio reparando una pared con su martillo.', image: 'images/reparar.png' },
+                    { title: 'Bombas', caption: 'Explosiones que dañan a todos los enemigos cercanos.', image: 'images/bombas.png' },
+                    { title: 'Estructuras Destruidas', caption: 'Paredes y paneles hechos pedazos.', image: 'images/paredes.png' },
+                    { title: 'Caseta de Vigilancia', caption: 'Te avisa cuando llega el pirata.', image: 'images/caseta.png' },
+                    { title: 'Pedidos', caption: 'El detalle de cada pedido con su tiempo límite.', image: 'images/placeholder.png' },
+                    { title: 'Alerta de Energía', caption: 'Luces parpadeando cuando la energía está baja.', image: 'images/placeholder.png' },
+                    { title: 'Resultados del Día', caption: 'Estrellas, lunas y bonos al cerrar la jornada.', image: 'images/results.png' },
+                    { title: 'Menú Principal', caption: 'Continúa tu partida desde el inicio del día.', image: 'images/saves.png' }
                 ];
 
         // Scroll to section function

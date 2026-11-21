@@ -2114,3 +2114,61 @@ a.info-item {
 		font-size: 15px;
 	}
 }
+
+/* ===== AstroPort 2.0 additions ===== */
+.version-badge {
+	display: inline-block;
+	margin: 0 auto 24px;
+	padding: 6px 18px;
+	border: 1px solid var(--accent-purple);
+	border-radius: 999px;
+	color: var(--text-primary);
+	font-size: 14px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	background: rgba(153, 69, 255, 0.12);
+}
+
+.features-section .goals-header {
+	margin-top: 100px;
+}
+
+.download-grid.download-grid-single {
+	grid-template-columns: 1fr;
+	max-width: 320px;
+	margin: 0 auto;
+}
+
+.card-cta.is-disabled {
+	opacity: 0.55;
+	cursor: not-allowed;
+	pointer-events: none;
+	text-align: center;
+}
+
+/* Header menu: una sola línea y espaciado uniforme (solo escritorio) */
+@media (min-width: 769px) {
+	.nav-menu {
+		gap: 4px;
+		flex-wrap: nowrap;
+	}
+
+	.nav-menu a {
+		display: block;
+		white-space: nowrap;
+		padding: 12px 14px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 1280px) and (min-width: 769px) {
+	.nav-menu a {
+		padding: 10px 8px;
+		font-size: 12px;
+		letter-spacing: 0.5px;
+	}
+
+	.logo-text {
+		font-size: 22px;
+	}
+}

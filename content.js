@@ -2,6 +2,188 @@
 (function () {
 	const newsArticles = [
 		{
+			id: 8,
+			title: 'AstroPort 2.0: la Estacion se Renueva',
+			summary: 'AstroSS estrena lunas, tienda, carrito de carga y un sistema de integridad y energia.',
+			image: 'images/estacion2.png',
+			author: 'Comando AstroSS',
+			date: '17 Noviembre 3125',
+			tags: ['Actualizacion', '2.0', 'Estacion'],
+			content: [
+				'La estacion completo su mayor actualizacion desde su apertura. Cada jornada bien calificada ahora se paga en lunas, la nueva moneda de AstroSS, que el personal puede gastar en la tienda de suministros.',
+				'El nuevo carrito de carga permite mover varias cajas por viaje y se puede mejorar para transportar hasta ocho. Ademas, la estacion cuenta ahora con indicadores de integridad estructural y energia que el personal debe vigilar.',
+				'Si la integridad llega a cero, la estacion queda fuera de servicio. Si la energia cae, las luces parpadean y el almacen deja de producir suministros hasta que se repare.'
+			]
+		},
+		{
+			id: 9,
+			title: 'Alerta: Piratas Espaciales',
+			summary: 'Se reporta la llegada de un pirata que sabotea los paneles de energia de la estacion.',
+			image: 'images/pirata.png',
+			author: 'Seguridad AstroSS',
+			date: '20 Noviembre 3125',
+			tags: ['Seguridad', 'Piratas', 'Alerta'],
+			content: [
+				'Un pirata espacial fue visto cerca de los hangares. Su objetivo son los paneles de energia: los sabotea uno por uno y escapa en cuanto se siente descubierto.',
+				'El personal tiene dos formas de detenerlo: atraparlo antes de que huya o destruir su nave. Ambas acciones seran recompensadas con lunas adicionales.',
+				'Se recomienda instalar la nueva caseta de vigilancia, que emite una alerta en cuanto el pirata llega a la estacion.'
+			]
+		},
+		{
+			id: 10,
+			title: 'Nueva Tienda de Suministros',
+			summary: 'Botiquines, bombas, semillas y mejoras ya estan disponibles a cambio de lunas.',
+			image: 'images/almacen.png',
+			author: 'Centro de Operaciones',
+			date: '22 Noviembre 3125',
+			tags: ['Tienda', 'Lunas', 'Mejoras'],
+			content: [
+				'La tienda de AstroSS abre sus puertas al personal. Desde el diario de la estacion se pueden comprar botiquines, bombas, semillas, la caseta de vigilancia y mejoras para el carrito y el martillo de reparacion.',
+				'Las bombas se lanzan en arco y danan a todos los enemigos cercanos, una herramienta clave contra las hordas alienigenas.',
+				'El inventario muestra en todo momento cuantos consumibles quedan y permite usarlos sin perder tiempo de servicio.'
+			]
+		},
+		{
+			id: 11,
+			title: 'Protocolo de Defensa y Reparacion',
+			summary: 'Hordas alienigenas atacan las paredes; el personal recibe martillos de reparacion.',
+			image: 'images/maquinaria1.png',
+			author: 'Departamento de Ingenieria',
+			date: '25 Noviembre 3125',
+			tags: ['Defensa', 'Reparacion', 'Aliens'],
+			content: [
+				'Cada vez que aterriza una nave alienigena, una horda de aliens se dirige a las paredes de la estacion para derribarlas. Junto a ellos llega un alien jefe que persigue al personal.',
+				'Las paredes y los paneles danados se rompen en pedazos y deben repararse con el martillo. Con la mejora de martillo, cada reparacion toma menos tiempo.',
+				'Ingenieria recuerda que la integridad de la estacion no se recupera sola entre jornadas: cada reparacion cuenta.'
+			]
+		},
+		{
+			id: 12,
+			title: 'El Vivero Abre sus Macetas',
+			summary: 'El personal ya puede plantar semillas y cosechar verduras que restauran la salud.',
+			image: 'images/vivero2.png',
+			author: 'BioSoporte AstroSS',
+			date: '28 Noviembre 3125',
+			tags: ['Vivero', 'Salud', 'Cultivo'],
+			content: [
+				'Las macetas del vivero quedaron habilitadas para el personal. Basta con plantar una semilla y esperar a que la planta crezca.',
+				'Cada cosecha produce una verdura que puede consumirse desde el inventario para recuperar vida durante las jornadas mas dificiles.',
+				'Las semillas pueden conseguirse en la tienda de suministros a cambio de lunas.'
+			]
+		},
+		{
+			id: 13,
+			title: 'Llega el Alien Jefe',
+			summary: 'Un alien de gran tamano desciende de su nave y persigue al personal por toda la estacion.',
+			image: 'images/alien.png',
+			author: 'Seguridad AstroSS',
+			date: '30 Noviembre 3125',
+			tags: ['Aliens', 'Jefe', 'Alerta'],
+			content: [
+				'La nave alienigena que aterrizo en el sector exterior trajo consigo a un alien jefe. A diferencia de la horda, este enemigo busca directamente al personal y lo sigue a donde vaya.',
+				'Sus ataques cuerpo a cuerpo son lentos pero poderosos. Seguridad recomienda mantener la distancia y usar la pistola o las bombas para debilitarlo.',
+				'Al ser derrotado, su nave abandona la estacion y las alarmas vuelven a la normalidad.'
+			]
+		},
+		{
+			id: 14,
+			title: 'Naves de Tres Naciones',
+			summary: 'China, Rusia y Estados Unidos envian naves con pedidos diferentes cada jornada.',
+			image: 'images/NAVE.jpg',
+			author: 'Relaciones Interplanetarias',
+			date: '02 Diciembre 3125',
+			tags: ['Naves', 'Naciones', 'Pedidos'],
+			content: [
+				'AstroSS recibe a diario tripulaciones de tres naciones. Cada nave aterriza en uno de los dos hangares y solicita una combinacion distinta de alimentos, herramientas y combustible.',
+				'El personal debe aceptar el pedido, preparar los suministros en el almacen y entregarlos en el hangar correcto antes de que se agote el tiempo.',
+				'Las entregas tardias o incorrectas afectan la calificacion de la jornada y la reputacion de la estacion.'
+			]
+		},
+		{
+			id: 15,
+			title: 'Calificacion por Estrellas',
+			summary: 'Cada jornada se evalua con estrellas segun la rapidez y precision de las entregas.',
+			image: 'images/results.png',
+			author: 'Centro de Operaciones',
+			date: '04 Diciembre 3125',
+			tags: ['Calidad', 'Estrellas', 'Servicio'],
+			content: [
+				'Al cerrar cada jornada, el sistema de la estacion promedia la calificacion de todos los pedidos atendidos, de cero a cinco estrellas.',
+				'Un promedio de 2.5 estrellas o menos pone en riesgo la operacion de la estacion. Un buen promedio, en cambio, se traduce en lunas para el personal.',
+				'Los resultados se muestran al final del dia junto con los bonos obtenidos, como la captura del pirata.'
+			]
+		},
+		{
+			id: 16,
+			title: 'Carrito de Carga Mejorado',
+			summary: 'Ingenieria presenta tres versiones del carrito con capacidad para 2, 4 y 8 cajas.',
+			image: 'images/carrito.png',
+			author: 'Departamento de Ingenieria',
+			date: '06 Diciembre 3125',
+			tags: ['Carrito', 'Mejoras', 'Logistica'],
+			content: [
+				'El nuevo carrito de carga reduce los viajes entre el almacen y los hangares. El personal puede tomarlo, cargar las cajas una por una y llevarlas todas juntas.',
+				'La primera mejora duplica su capacidad a cuatro cajas, y la segunda la lleva hasta ocho. Ambas se compran en la tienda de suministros.',
+				'Ingenieria recuerda que mientras se empuja el carrito no es posible usar el arma ni reparar.'
+			]
+		},
+		{
+			id: 17,
+			title: 'Caseta de Vigilancia Instalada',
+			summary: 'Una nueva caseta detecta la llegada de piratas y alerta al personal de inmediato.',
+			image: 'images/caseta.png',
+			author: 'Seguridad AstroSS',
+			date: '08 Diciembre 3125',
+			tags: ['Seguridad', 'Vigilancia', 'Piratas'],
+			content: [
+				'Tras los primeros reportes de sabotaje, Seguridad instalo una caseta de vigilancia en la estacion.',
+				'Cuando un pirata se aproxima, la caseta emite una alerta parpadeante en la pantalla del personal para que pueda reaccionar a tiempo.',
+				'La caseta esta disponible como compra unica en la tienda de suministros.'
+			]
+		},
+		{
+			id: 18,
+			title: 'Estructuras que se Rompen',
+			summary: 'Los ataques ahora dejan paredes, paneles y naves hechos pedazos.',
+			image: 'images/paredes.png',
+			author: 'Departamento de Ingenieria',
+			date: '10 Diciembre 3125',
+			tags: ['Destruccion', 'Fisica', 'Reparacion'],
+			content: [
+				'Los sensores de la estacion confirmaron que los impactos alienigenas y los sabotajes rompen las estructuras en fragmentos reales.',
+				'Los escombros se despejan solos despues de unos segundos, pero la pared o el panel queda inutilizado hasta que el personal lo repare.',
+				'La nave pirata tambien puede ser destruida si recibe suficiente dano.'
+			]
+		},
+		{
+			id: 19,
+			title: 'Bombas de Contencion',
+			summary: 'El arsenal de la estacion suma bombas que se lanzan en arco y danan en area.',
+			image: 'images/bombas.png',
+			author: 'Seguridad AstroSS',
+			date: '12 Diciembre 3125',
+			tags: ['Armas', 'Bombas', 'Defensa'],
+			content: [
+				'Ademas de la pistola reglamentaria, el personal ya puede lanzar bombas de contencion contra grupos de enemigos.',
+				'Las bombas siguen una trayectoria en arco y explotan al tocar el suelo o tras unos segundos, danando a todos los aliens dentro de su radio.',
+				'Se recomienda no lanzarlas cerca de las paredes de la estacion durante una horda.'
+			]
+		},
+		{
+			id: 20,
+			title: 'Jornadas Guardadas',
+			summary: 'La estacion registra el progreso del personal al inicio de cada jornada.',
+			image: 'images/saves.png',
+			author: 'Centro de Operaciones',
+			date: '15 Diciembre 3125',
+			tags: ['Guardado', 'Progreso', 'Sistema'],
+			content: [
+				'El nuevo sistema de registro guarda automaticamente las lunas, los consumibles, las mejoras y el estado de la estacion al comenzar cada dia.',
+				'Al volver, el personal puede elegir Continuar en el menu principal y retomar desde el inicio de la jornada guardada.',
+				'Al completar las tres jornadas con exito, el registro se reinicia para una nueva partida.'
+			]
+		},
+		{
 			id: 1,
 			title: 'Llegando a la Luna',
 			summary: 'Primera misión logística a la órbita lunar para habilitar rutas estables hacia AstroSS.',
